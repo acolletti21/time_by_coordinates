@@ -1,0 +1,11 @@
+<h3>Find Local Time By Latitude and Longitude</h3>
+
+<%= form_tag '/', method: :get do %>
+  <div>
+    Latitude: <%= text_field_tag :latitude %> Longitude: <%= text_field_tag :longitude %> <%= submit_tag "Go"%>
+  </div>
+<% end %>
+
+
+<h2><%= @zone_name %></h2>
+<h2><%= @time %></h2>

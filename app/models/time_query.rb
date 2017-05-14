@@ -1,0 +1,3 @@
+class TimeQuery < ApplicationRecord
+
+end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  session_id: MyString
+  latitude: MyString
+  longitude: MyString
+  time: 2017-05-14 16:09:29
+  zone_name: MyString
+
+two:
+  session_id: MyString
+  latitude: MyString
+  longitude: MyString
+  time: 2017-05-14 16:09:29
+  zone_name: MyString
