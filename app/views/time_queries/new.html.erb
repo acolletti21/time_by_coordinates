@@ -1,6 +1,6 @@
 <h3>Find Local Time By Latitude and Longitude</h3>
 
-<%= form_tag '/', method: :get do %>
+<%= form_tag '/time_queries', method: :post do %>
   <div>
     Latitude: <%= text_field_tag :latitude %> Longitude: <%= text_field_tag :longitude %> <%= submit_tag "Go"%>
   </div>

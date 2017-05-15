@@ -1,13 +1,19 @@
 class TimeQueriesController < ApplicationController
-  def index
-    latitude = params[:latitude] || "40.71417"
-    longitude = params[:longitude] || "-74.00639"
+  before_action :get_data
 
-    @time_search = Unirest.get("#{ ENV['API_HOST_URL'] }/v2/get-time-zone?key=#{ ENV['API_KEY'] }&format=json&by=position&lat=#{ latitude }&lng=#{ longitude }").body
+  def new
+    @time_query = TimeQuery.new
+  end
 
-    @latitude = params[:latitude]
-    @longitude = params[:latitude]
-    @time = @time_search["formatted"]
-    @zone_name = @time_search["zoneName"]
+  def create
+
+
+    @time_query = TimeQuery.create(
+                                  session_id: session.id,
+                                  latitude: params[:latitude],
+                                  longitude: params[:longitude],
+                                  time: params[:formatted],
+                                  zone_name: params[:zone_name]
+                                  )
   end
 end
